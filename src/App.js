@@ -4,6 +4,7 @@ import bg from './assets/img/bg.jpg'
 import { CssBaseline } from '@material-ui/core';
 import Nav from './components/Nav';
 import Locais from './components/Locais'
+import Footer from './components/Footer'
 
 const useStyles = makeStyles((theme) => ({
   container:{
@@ -22,6 +23,7 @@ function App() {
       <CssBaseline/>
       <Nav/>
       <Locais/>
+      <Footer/>
     </div>
   );
 }

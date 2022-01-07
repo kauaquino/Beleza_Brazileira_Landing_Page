@@ -10,12 +10,13 @@ import Typography from '@mui/material/Typography';
 
 const useStyles = makeStyles((theme) =>({
 root:{
-    maxWidth: '300px !important',
-    minWidth: '300px !important',
-    minHeigth: '300px !important',
-    maxHeigth: '300px !important',
+    maxWidth: '400px !important',
     background: "rgba(0,0,0,0.5) !important",
     margin: '20px',
+    minHeight: "900px",
+    [theme.breakpoints.down("md")]:{
+        minHeight: "100px",
+    }
 },
 media: {
     height: '440px !important'
@@ -35,6 +36,7 @@ descricao:{
 
 
 export default function Local(props) {
+    console.log(props)
     const classes = useStyles();
     return (
         <Collapse in={props.checked} 
@@ -44,7 +46,7 @@ export default function Local(props) {
                 <CardMedia
                     className={classes.media}
                     component="img"
-                    image={props.img}
+                    image={props.estado.img}
                     alt={props.titulo}
                 />
                 <CardContent>
@@ -54,14 +56,14 @@ export default function Local(props) {
                     component="h1"
                     className={classes.title} >
 
-                    {props.titulo}
+                    {props.estado.titulo}
                     </Typography>
                     <Typography 
                     variant="body2"
                     color="textSecondary"
                     component="p" 
                     className={classes.descricao}>
-                        {props.desc}
+                        {props.estado.descricao}
                     </Typography>
                 </CardContent>
             </Card>

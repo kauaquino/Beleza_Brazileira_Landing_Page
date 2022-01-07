@@ -11,10 +11,11 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         fontFamily: 'Nunito', 
         height: '100vh',
+    
         textShadow: '0px 0px 6px black'
     },
     Bar:{
-        background: 'none'
+        background: "rgba(0,0,0,0.5) !important",
     },
     icon:{
         color: '#fff',
@@ -25,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbar:{
         width: "80%",
-        margin: '0 auto'
+        margin: '0 auto',
+        textAlign: 'center'
     },
     brasil:{
         color: "#5AFF3D",
@@ -54,9 +56,6 @@ export default function Nav() {
             <AppBar className={classes.Bar} elevation={0}>
                 <Toolbar className={classes.toolbar}>
                     <h1 className={classes.title}>Beleza <span className={classes.brasil}>Brasileira</span></h1>
-                    <IconButton>
-                        <SortIcon className={classes.icon}/>
-                    </IconButton>
                 </Toolbar>               
             </AppBar>
 
